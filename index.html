@@ -65,6 +65,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-install-pygame" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/21/install-pygame/" class="article-date">
+  <time datetime="2015-12-21T04:10:48.000Z" itemprop="datePublished">2015-12-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/21/install-pygame/">install pygame on mac osx</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  自己机器上装的python版本都是3.5,而pygame似乎没有支持3.5的包，在mac osx上安装也是很多的坑.</p>
+<p>  于是先在机器上装了2.7,发现有出现了ssl错误，一番搜索升级为2.7.9：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv install <span class="number">2.7</span>.<span class="number">9</span></span><br></pre></td></tr></table></figure>
+<p> <a href="www.pygame.org">pygame.org</a>上有对应的安装包，但是对应的都是brew之类安装的python版本，由于我是通过<a href="https://github.com/yyuu/pyenv" target="_blank" rel="external">pyenv</a>安装的，所以我也不确定啊能用，还是按照自己的方式来吧.</p>
+<p> macosx上的准备,安装<a href="http://xquartz.macosforge.org" target="_blank" rel="external">xQuartz</a>,然后</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install sdl smpeg sdl_image sdl_mixer sdl_ttf portmidi hg</span><br></pre></td></tr></table></figure>
+<p> 安装完后，就通过pip安装pygame</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install hg+http://bitbucket.org/pygame/pygame</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ python</span><br><span class="line">&gt;&gt;&gt; import pygame</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span> pygame.ver</span><br><span class="line"><span class="number">1.9</span>.<span class="number">2</span>a0</span><br></pre></td></tr></table></figure>
+<p> 大功告成.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhangyi2099.github.io/2015/12/21/install-pygame/" data-id="ciifshilj00001kyd6a4jqdnn" class="article-share-link">Share</a>
+      
+        <a href="zhangyi2099.github.io/2015/12/21/install-pygame/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-python" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/07/python/" class="article-date">
@@ -242,7 +292,7 @@ hexo d -g
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -260,7 +310,7 @@ hexo d -g
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -270,6 +320,10 @@ hexo d -g
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/12/21/install-pygame/">install pygame on mac osx</a>
+          </li>
         
           <li>
             <a href="/2015/12/07/python/">python program</a>

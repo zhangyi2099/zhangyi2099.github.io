@@ -3,54 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo搭建小记 | Zhangyi&#39;s blog</title>
+  <title>install pygame on mac osx | Zhangyi&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装1npm install hexo-cli -g
-初始化hexo init blog
-cd blog
-npm install
-
-新建文章hexo new &quot;hexo&quot;
-
-git部署npm install hexo-deployer-git --save
-
-修改_config.yml #Deployment
-deploy:
-  type: git
-  repo: https://github.c">
+  <meta name="description" content="自己机器上装的python版本都是3.5,而pygame似乎没有支持3.5的包，在mac osx上安装也是很多的坑.
+  于是先在机器上装了2.7,发现有出现了ssl错误，一番搜索升级为2.7.9：
+  1$ pyenv install 2.7.9
+ pygame.org上有对应的安装包，但是对应的都是brew之类安装的python版本，由于我是通过pyenv安装的，所以我也不确定啊能用，还是按照">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo搭建小记">
-<meta property="og:url" content="zhangyi2099.github.io/2015/11/04/hexo/index.html">
+<meta property="og:title" content="install pygame on mac osx">
+<meta property="og:url" content="zhangyi2099.github.io/2015/12/21/install-pygame/index.html">
 <meta property="og:site_name" content="Zhangyi's blog">
-<meta property="og:description" content="安装1npm install hexo-cli -g
-初始化hexo init blog
-cd blog
-npm install
-
-新建文章hexo new &quot;hexo&quot;
-
-git部署npm install hexo-deployer-git --save
-
-修改_config.yml #Deployment
-deploy:
-  type: git
-  repo: https://github.c">
-<meta property="og:updated_time" content="2015-12-07T04:27:24.000Z">
+<meta property="og:description" content="自己机器上装的python版本都是3.5,而pygame似乎没有支持3.5的包，在mac osx上安装也是很多的坑.
+  于是先在机器上装了2.7,发现有出现了ssl错误，一番搜索升级为2.7.9：
+  1$ pyenv install 2.7.9
+ pygame.org上有对应的安装包，但是对应的都是brew之类安装的python版本，由于我是通过pyenv安装的，所以我也不确定啊能用，还是按照">
+<meta property="og:updated_time" content="2015-12-21T09:57:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo搭建小记">
-<meta name="twitter:description" content="安装1npm install hexo-cli -g
-初始化hexo init blog
-cd blog
-npm install
-
-新建文章hexo new &quot;hexo&quot;
-
-git部署npm install hexo-deployer-git --save
-
-修改_config.yml #Deployment
-deploy:
-  type: git
-  repo: https://github.c">
+<meta name="twitter:title" content="install pygame on mac osx">
+<meta name="twitter:description" content="自己机器上装的python版本都是3.5,而pygame似乎没有支持3.5的包，在mac osx上安装也是很多的坑.
+  于是先在机器上装了2.7,发现有出现了ssl错误，一番搜索升级为2.7.9：
+  1$ pyenv install 2.7.9
+ pygame.org上有对应的安装包，但是对应的都是brew之类安装的python版本，由于我是通过pyenv安装的，所以我也不确定啊能用，还是按照">
   
     <link rel="alternative" href="/atom.xml" title="Zhangyi&#39;s blog" type="application/atom+xml">
   
@@ -100,10 +73,10 @@ deploy:
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-install-pygame" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/04/hexo/" class="article-date">
-  <time datetime="2015-11-04T12:51:06.000Z" itemprop="datePublished">2015-11-04</time>
+    <a href="/2015/12/21/install-pygame/" class="article-date">
+  <time datetime="2015-12-21T04:10:48.000Z" itemprop="datePublished">2015-12-21</time>
 </a>
     
   </div>
@@ -114,7 +87,7 @@ deploy:
         
   
     <h1 class="article-title" itemprop="name">
-      hexo搭建小记
+      install pygame on mac osx
     </h1>
   
 
@@ -122,33 +95,26 @@ deploy:
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="安装">安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h3 id="初始化">初始化</h3><pre><code class="bash">hexo init blog
-<span class="built_in">cd</span> blog
-npm install
-</code></pre>
-<h3 id="新建文章">新建文章</h3><pre><code class="bash">hexo new <span class="string">"hexo"</span>
-</code></pre>
-<h3 id="git部署">git部署</h3><pre><code class="bash">npm install hexo-deployer-git --save
-
-修改_config.yml <span class="comment">#Deployment</span>
-deploy:
-  <span class="built_in">type</span>: git
-  repo: https://github.com/username/username.github.io.git
-  branch: master
-
-hexo d -g
-</code></pre>
+        <p>  自己机器上装的python版本都是3.5,而pygame似乎没有支持3.5的包，在mac osx上安装也是很多的坑.</p>
+<p>  于是先在机器上装了2.7,发现有出现了ssl错误，一番搜索升级为2.7.9：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv install <span class="number">2.7</span>.<span class="number">9</span></span><br></pre></td></tr></table></figure>
+<p> <a href="www.pygame.org">pygame.org</a>上有对应的安装包，但是对应的都是brew之类安装的python版本，由于我是通过<a href="https://github.com/yyuu/pyenv" target="_blank" rel="external">pyenv</a>安装的，所以我也不确定啊能用，还是按照自己的方式来吧.</p>
+<p> macosx上的准备,安装<a href="http://xquartz.macosforge.org" target="_blank" rel="external">xQuartz</a>,然后</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install sdl smpeg sdl_image sdl_mixer sdl_ttf portmidi hg</span><br></pre></td></tr></table></figure>
+<p> 安装完后，就通过pip安装pygame</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install hg+http://bitbucket.org/pygame/pygame</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ python</span><br><span class="line">&gt;&gt;&gt; import pygame</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span> pygame.ver</span><br><span class="line"><span class="number">1.9</span>.<span class="number">2</span>a0</span><br></pre></td></tr></table></figure>
+<p> 大功告成.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="zhangyi2099.github.io/2015/11/04/hexo/" data-id="ciifgvvg00000i0ydafteevfb" class="article-share-link">Share</a>
+      <a data-url="zhangyi2099.github.io/2015/12/21/install-pygame/" data-id="ciifshilj00001kyd6a4jqdnn" class="article-share-link">Share</a>
       
-        <a href="zhangyi2099.github.io/2015/11/04/hexo/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="zhangyi2099.github.io/2015/12/21/install-pygame/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 
     </footer>
   </div>
@@ -156,15 +122,11 @@ hexo d -g
     
 <nav id="article-nav">
   
-    <a href="/2015/12/07/pyenv/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          pyenv
-        
-      </div>
-    </a>
   
+    <a href="/2015/12/07/python/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python program</div>
+    </a>
   
 </nav>
 
@@ -261,7 +223,7 @@ hexo d -g
 <script>
   var disqus_shortname = 'zhangyi2099b';
   
-  var disqus_url = 'zhangyi2099.github.io/2015/11/04/hexo/';
+  var disqus_url = 'zhangyi2099.github.io/2015/12/21/install-pygame/';
   
   (function(){
     var dsq = document.createElement('script');
