@@ -200,6 +200,101 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/23/install-scrapy-on-mac-osx/" itemprop="url">
+                  install scrapy on mac osx
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2015-12-23T12:11:46+08:00" content="2015-12-23">
+              2015-12-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/23/install-scrapy-on-mac-osx/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/23/install-scrapy-on-mac-osx/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>又是python3,发现坑真多，能不能好好用python3了…</p>
+<p>macosx安装scrapy的坑真多，纪录一下</p>
+<p>首先支持的是python2,python3上安装成功却不能使用…</p>
+<p>###libxml2,libxslt<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$brew</span> install libxml2</span><br><span class="line"><span class="variable">$brew</span> install libxslt</span><br><span class="line"><span class="variable">$brew</span> link libxml2 --force</span><br><span class="line"><span class="variable">$brew</span> link libxslt --force</span><br></pre></td></tr></table></figure></p>
+<p>###command line<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$xcode</span>-select --install</span><br></pre></td></tr></table></figure></p>
+<p>###lxml !!!出问题的一般都在这<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$CPATH</span>=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.<span class="number">11</span>.sdk/usr/include/libxml2/ pip install lxml</span><br></pre></td></tr></table></figure></p>
+<p>善用locate命令</p>
+<p>###scrapy<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$pip</span> install scrapy</span><br></pre></td></tr></table></figure></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/12/21/install-pygame/" itemprop="url">
                   install pygame on mac osx
                 </a>
@@ -625,7 +720,7 @@ hexo d -g
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -639,7 +734,7 @@ hexo d -g
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

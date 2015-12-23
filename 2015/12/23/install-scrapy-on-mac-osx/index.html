@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="mac os x,python," />
 
 
 
@@ -51,19 +51,25 @@
 
 
 
-<meta name="description" content="pyenv是个多版本python管理器,可以同时管理多个python版本共存，如pypy,miniconde等等
-安装12345$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv$ echo &apos;export PYENV_ROOT=&quot;$HOME/.pyenv&quot;&apos; &amp;gt;&amp;gt; ~/.bash_profile$ echo &apos;export P">
+<meta name="description" content="又是python3,发现坑真多，能不能好好用python3了…
+macosx安装scrapy的坑真多，纪录一下
+首先支持的是python2,python3上安装成功却不能使用…
+###libxml2,libxslt1234$brew install libxml2$brew install libxslt$brew link libxml2 --force$brew link libxslt --">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pyenv">
-<meta property="og:url" content="zhangyi2099.github.io/2015/12/07/pyenv/index.html">
+<meta property="og:title" content="install scrapy on mac osx">
+<meta property="og:url" content="zhangyi2099.github.io/2015/12/23/install-scrapy-on-mac-osx/index.html">
 <meta property="og:site_name" content="Zhangyi's blog">
-<meta property="og:description" content="pyenv是个多版本python管理器,可以同时管理多个python版本共存，如pypy,miniconde等等
-安装12345$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv$ echo &apos;export PYENV_ROOT=&quot;$HOME/.pyenv&quot;&apos; &amp;gt;&amp;gt; ~/.bash_profile$ echo &apos;export P">
-<meta property="og:updated_time" content="2015-12-07T04:27:38.000Z">
+<meta property="og:description" content="又是python3,发现坑真多，能不能好好用python3了…
+macosx安装scrapy的坑真多，纪录一下
+首先支持的是python2,python3上安装成功却不能使用…
+###libxml2,libxslt1234$brew install libxml2$brew install libxslt$brew link libxml2 --force$brew link libxslt --">
+<meta property="og:updated_time" content="2015-12-23T04:21:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pyenv">
-<meta name="twitter:description" content="pyenv是个多版本python管理器,可以同时管理多个python版本共存，如pypy,miniconde等等
-安装12345$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv$ echo &apos;export PYENV_ROOT=&quot;$HOME/.pyenv&quot;&apos; &amp;gt;&amp;gt; ~/.bash_profile$ echo &apos;export P">
+<meta name="twitter:title" content="install scrapy on mac osx">
+<meta name="twitter:description" content="又是python3,发现坑真多，能不能好好用python3了…
+macosx安装scrapy的坑真多，纪录一下
+首先支持的是python2,python3上安装成功却不能使用…
+###libxml2,libxslt1234$brew install libxml2$brew install libxslt$brew link libxml2 --force$brew link libxslt --">
 
 
 
@@ -75,7 +81,7 @@
   };
 </script>
 
-  <title> pyenv | Zhangyi's blog </title>
+  <title> install scrapy on mac osx | Zhangyi's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -195,7 +201,7 @@
             
             
               
-                pyenv
+                install scrapy on mac osx
               
             
           </h1>
@@ -204,8 +210,8 @@
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-12-07T12:02:28+08:00" content="2015-12-07">
-              2015-12-07
+            <time itemprop="dateCreated" datetime="2015-12-23T12:11:46+08:00" content="2015-12-23">
+              2015-12-23
             </time>
           </span>
 
@@ -215,8 +221,8 @@
             
               <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/12/07/pyenv/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/07/pyenv/" itemprop="commentsCount"></span>
+              <a href="/2015/12/23/install-scrapy-on-mac-osx/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/23/install-scrapy-on-mac-osx/" itemprop="commentsCount"></span>
               </a>
             </span>
             
@@ -235,12 +241,14 @@
       
 
       
-        <span itemprop="articleBody"><p><a href="https://github.com/yyuu/pyenv" target="_blank" rel="external">pyenv</a>是个多版本python管理器,可以同时管理多个python版本共存，如pypy,miniconde等等</p>
-<h3 id="安装">安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/yyuu/pyenv.git ~/.pyenv</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">'export PYENV_ROOT="$HOME/.pyenv"'</span> &gt;&gt; ~/.bash_profile</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">'export PATH="$PYENV_ROOT/bin:$PATH"'</span> &gt;&gt; ~/.bash_profile</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">'eval "$(pyenv init -)"'</span> &gt;&gt; ~/.bash_profile</span><br><span class="line">$ <span class="built_in">exec</span> <span class="variable">$SHELL</span> <span class="operator">-l</span></span><br></pre></td></tr></table></figure>
-<h3 id="安装python">安装python</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv install --list //查看可安装的python版本</span><br><span class="line">$ pyenv install <span class="number">3.5</span>.<span class="number">0</span> 安装python3.<span class="number">5.0</span></span><br></pre></td></tr></table></figure>
-<h3 id="更新pyenv">更新pyenv</h3><h4 id="安装完之后，需要更新一下才能看到已经安装的版本">安装完之后，需要更新一下才能看到已经安装的版本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv <span class="built_in">rehash</span></span><br><span class="line"></span><br><span class="line">$ pyenv versions //查看已经安装好的版本，带*号的为当前使用的版本</span><br></pre></td></tr></table></figure>
-<h3 id="选择python版本">选择python版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv global <span class="number">3.5</span>.<span class="number">0</span> //设置全局版本，即系统使用的将是此版本</span><br><span class="line">$ pyenv <span class="built_in">local</span> <span class="number">3.5</span>.<span class="number">0</span> //当前目录下的使用版本，有点类似virtualenv</span><br></pre></td></tr></table></figure>
-<h3 id="网络问题">网络问题</h3><p>如anaconda之类大容量的版本，由于网络的问题，总是连接中断，安装失败。此时可以先从官方网站下载安装包，然后放在~/.pyenv/cache文件夹中，然后在pyenv install 此版本，pyenv会自动先从此文件夹中搜索</p>
+        <span itemprop="articleBody"><p>又是python3,发现坑真多，能不能好好用python3了…</p>
+<p>macosx安装scrapy的坑真多，纪录一下</p>
+<p>首先支持的是python2,python3上安装成功却不能使用…</p>
+<p>###libxml2,libxslt<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$brew</span> install libxml2</span><br><span class="line"><span class="variable">$brew</span> install libxslt</span><br><span class="line"><span class="variable">$brew</span> link libxml2 --force</span><br><span class="line"><span class="variable">$brew</span> link libxslt --force</span><br></pre></td></tr></table></figure></p>
+<p>###command line<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$xcode</span>-select --install</span><br></pre></td></tr></table></figure></p>
+<p>###lxml !!!出问题的一般都在这<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$CPATH</span>=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.<span class="number">11</span>.sdk/usr/include/libxml2/ pip install lxml</span><br></pre></td></tr></table></figure></p>
+<p>善用locate命令</p>
+<p>###scrapy<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$pip</span> install scrapy</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -248,6 +256,8 @@
     <footer class="post-footer">
       
         <div class="post-tags">
+          
+            <a href="/tags/mac-os-x/" rel="tag">#mac os x</a>
           
             <a href="/tags/python/" rel="tag">#python</a>
           
@@ -258,17 +268,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/04/hexo/" rel="next" title="hexo搭建小记">
-                <i class="fa fa-chevron-left"></i> hexo搭建小记
+              <a href="/2015/12/21/install-pygame/" rel="next" title="install pygame on mac osx">
+                <i class="fa fa-chevron-left"></i> install pygame on mac osx
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/07/python/" rel="prev" title="python program">
-                python program <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -386,7 +392,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装python"><span class="nav-number">2.</span> <span class="nav-text">安装python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新pyenv"><span class="nav-number">3.</span> <span class="nav-text">更新pyenv</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装完之后，需要更新一下才能看到已经安装的版本"><span class="nav-number">3.1.</span> <span class="nav-text">安装完之后，需要更新一下才能看到已经安装的版本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择python版本"><span class="nav-number">4.</span> <span class="nav-text">选择python版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络问题"><span class="nav-number">5.</span> <span class="nav-text">网络问题</span></a></li></ol></div>
+              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -446,9 +452,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'zhangyisthinking';
-      var disqus_identifier = '2015/12/07/pyenv/';
-      var disqus_title = 'pyenv';
-      var disqus_url = 'zhangyi2099.github.io/2015/12/07/pyenv/';
+      var disqus_identifier = '2015/12/23/install-scrapy-on-mac-osx/';
+      var disqus_title = 'install scrapy on mac osx';
+      var disqus_url = 'zhangyi2099.github.io/2015/12/23/install-scrapy-on-mac-osx/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
